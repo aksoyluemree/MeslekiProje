@@ -1,0 +1,30 @@
+﻿@model OBS_MVC.Models.ObsDonem
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>ObsDonem</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Yil)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Yil)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DonemTip)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DonemTip)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.DonemId">Düzenle</a> |
+    <a asp-action="Index">Listeye dön</a>
+</div>

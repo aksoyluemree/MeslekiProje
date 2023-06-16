@@ -1,0 +1,110 @@
+﻿@model OBS_MVC.Models.ObsOgrenci
+<div class="container bootstrap snippets bootdey">
+    <div class="panel-body inf-content">
+        <div class="row">
+            <div class="col-md-3">
+                <img alt="" style="width:500px;" title="" class="img-circle img-thumbnail isTooltip"
+                     src="@ViewBag.ImageDataUrl" data-original-title="Usuario">
+            </div>
+            <div class="col-md-9">
+                <strong>Öğrenci Bilgileri</strong><br>
+                <div class="table-responsive">
+                    <table class="table table-user-information">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <strong>
+                                        <span class="fa fa-asterisk text-primary"></span>
+                                        Öğrenci Numarası
+                                    </strong>
+                                </td>
+                                <td class="text-primary">
+                                    @Model.OgrenciId
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>
+                                        <span class="fa fa-user  text-primary"></span>
+                                        Adı
+                                    </strong>
+                                </td>
+                                <td class="text-primary">
+                                    @Model.Ad
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>
+                                        <span class="fa fa-cloud text-primary"></span>
+                                        Soyadı
+                                    </strong>
+                                </td>
+                                <td class="text-primary">
+                                    @Model.Soyad
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <strong>
+                                        <span class="fa fa-bookmark text-primary"></span>
+                                        Tc Kimlik Numarası
+                                    </strong>
+                                </td>
+                                <td class="text-primary">
+                                    @Model.KimlikNo
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <strong>
+                                        <span class="fa fa-eye text-primary"></span>
+                                        Bölüm
+                                    </strong>
+                                </td>
+                                <td class="text-primary">
+                                    @Model.Bolum.Ad
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>
+                                        <span class="fa fa-envelope text-primary"></span>
+                                        E-Posta
+                                    </strong>
+                                </td>
+                                <td class="text-primary">
+                                    @Model.Eposta
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>
+                                        <span class="fa fa-calendar text-primary"></span>
+                                        Doğum Tarihi
+                                    </strong>
+                                </td>
+                                <td class="text-primary">
+                                    @Model.DogumTarih
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>
+                                        <span class="fa fa-calendar text-primary"></span>
+                                        Giriş Tairihi
+                                    </strong>
+                                </td>
+                                <td class="text-primary">
+                                    @Model.GirisTarih
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,82 @@
+﻿@model IEnumerable<OBS_MVC.Models.ObsOgretimGorevlisi>
+
+@{
+    ViewData["Title"] = "Öğretim Görevlisi";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Öğretim Görevlisi Oluştur</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Ad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Soyad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.KimlikNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Eposta)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DogumTarih)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GirisTarih)
+            </th>
+            @*<th>
+                @Html.DisplayNameFor(model => model.CikisTarih)
+            </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.Bolum)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Kullanici)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Soyad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.KimlikNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Eposta)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DogumTarih)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GirisTarih)
+            </td>
+            
+            <td>
+                @Html.DisplayFor(modelItem => item.Bolum.Ad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Kullanici.KullaniciAdi)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.OgretimGorevlisiId">Düzenle</a> |
+                <a asp-action="Details" asp-route-id="@item.OgretimGorevlisiId">Detay</a> |
+                <a asp-action="Delete" asp-route-id="@item.OgretimGorevlisiId">Sil</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

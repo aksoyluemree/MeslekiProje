@@ -1,0 +1,47 @@
+﻿@model IEnumerable<OBS_MVC.Models.ObsOgrenciSinav>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Notu)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ogrenci)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sinav)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Notu)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ogrenci.Ad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sinav.SinavId)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.OgrenciSinavId">Düzenle</a> |
+                <a asp-action="Details" asp-route-id="@item.OgrenciSinavId">Detay</a> |
+                <a asp-action="Delete" asp-route-id="@item.OgrenciSinavId">Sil</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

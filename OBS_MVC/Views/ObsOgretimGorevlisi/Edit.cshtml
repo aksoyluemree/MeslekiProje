@@ -1,0 +1,86 @@
+﻿@model OBS_MVC.Models.ObsOgretimGorevlisi
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Edit</h1>
+
+<h4>ObsOgretimGorevlisi</h4>
+<hr />
+<div class="row">
+    <form asp-action="Edit" method="post" enctype="multipart/form-data">
+        <div class="col-md-6">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="OgretimGorevlisiId" />
+            <input type="hidden" asp-for="Resim" />
+            <div class="form-group">
+                <label asp-for="Ad" class="control-label"></label>
+                <input asp-for="Ad" class="form-control" />
+                <span asp-validation-for="Ad" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Soyad" class="control-label"></label>
+                <input asp-for="Soyad" class="form-control" />
+                <span asp-validation-for="Soyad" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="KimlikNo" class="control-label"></label>
+                <input asp-for="KimlikNo" class="form-control" />
+                <span asp-validation-for="KimlikNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Eposta" class="control-label"></label>
+                <input asp-for="Eposta" class="form-control" />
+                <span asp-validation-for="Eposta" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DogumTarih" class="control-label"></label>
+                <input asp-for="DogumTarih" class="form-control" />
+                <span asp-validation-for="DogumTarih" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GirisTarih" class="control-label"></label>
+                <input asp-for="GirisTarih" class="form-control" />
+                <span asp-validation-for="GirisTarih" class="text-danger"></span>
+            </div>
+            @*<div class="form-group">
+                <label asp-for="CikisTarih" class="control-label"></label>
+                <input asp-for="CikisTarih" class="form-control" />
+                <span asp-validation-for="CikisTarih" class="text-danger"></span>
+            </div>*@
+            <div class="form-group">
+                <label asp-for="BolumId" class="control-label"></label>
+                <select asp-for="BolumId" class="form-control" asp-items="ViewBag.BolumId"></select>
+                <span asp-validation-for="BolumId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="KullaniciId" class="control-label"></label>
+                <select asp-for="KullaniciId" class="form-control" asp-items="ViewBag.KullaniciId"></select>
+                <span asp-validation-for="KullaniciId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <img alt="" style="width:500px;" title="" class="img-circle img-thumbnail isTooltip"
+                 src="@ViewBag.ImageDataUrl" data-original-title="Usuario">
+
+            <div class="form-group">
+                <label asp-for="Resim" class="control-label"></label>
+                <input type="file" id="file1" name="file1" />
+            </div>
+        </div>
+    </form>
+</div>
+
+<div>
+    <a asp-action="Index">Listeye dön</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

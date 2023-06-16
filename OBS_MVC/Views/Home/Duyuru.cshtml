@@ -1,0 +1,16 @@
+﻿@model IEnumerable<OBS_MVC.Models.ObsDuyuru>
+<div class="text-center" style="margin-top: 10%;">
+    <h2>Duyurular</h2>
+</div>
+
+
+@foreach (var item in Model)
+{
+    <div>
+        <h1>
+            @Html.DisplayFor(modelItem => item.BolumId) -  @Html.DisplayFor(modelItem => item.DuyuruId)
+        </h1>
+        <h4> @Html.DisplayFor(modelItem => item.Duyuru)</h4>
+
+    </div>
+}

@@ -1,0 +1,47 @@
+﻿@model IEnumerable<OBS_MVC.Models.ObsDonemDers>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="CreateDonemDers">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Ders)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Donem)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OgretimGorevlisi)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ders.Ad)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Donem.DonemId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OgretimGorevlisi.Ad)
+                </td>
+                <td>
+                    <a asp-action="DonemDersDetails" asp-route-id="@item.DonemDersId">Detay</a> |
+                    <a asp-controller="ObsDonemDers" asp-action="Delete" asp-route-id="@item.DonemDersId">Sil</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

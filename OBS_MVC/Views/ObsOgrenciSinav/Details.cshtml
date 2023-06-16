@@ -1,0 +1,36 @@
+﻿@model OBS_MVC.Models.ObsOgrenciSinav
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>ObsOgrenciSinav</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Notu)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Notu)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Ogrenci)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Ogrenci.Ad)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Sinav)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Sinav.SinavId)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.OgrenciSinavId">Düzenle</a> |
+    <a asp-action="Index">Listeye dön</a>
+</div>

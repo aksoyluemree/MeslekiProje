@@ -1,0 +1,60 @@
+﻿@model OBS_MVC.Models.ObsOgrenciDonemDers
+
+@{
+    ViewData["Title"] = "Detaylar";
+}
+
+<h1>Detaylar</h1>
+
+<div>
+    <h4>ObsOgrenciDonemDers</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Vize1)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Vize1)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Vize2)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Vize2)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FinalNot)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FinalNot)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Ortalama)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Ortalama)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.BasariDurumTip)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.BasariDurumTip)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DonemDers)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DonemDers.DonemDersId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Ogrenci)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Ogrenci.Ad)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.KayıtId">Düzenle</a> |
+    <a asp-action="Index">Listeye dön</a>
+</div>

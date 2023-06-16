@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "OIS";
+    Layout = "~/Views/Shared/_NoLayout.cshtml";
+}
+
+<div class="text-center">
+    <div>
+        <img src="~/img/logo.png"/>
+    </div>
+    <div class="center"> 
+        <div>
+            <a style="margin-top:5px; width: 200px;" asp-action="Login" asp-controller="Account" class="list-group-item">
+                <span class="float-left"><span class="fa fa-user"></span></span>Öğrenci Girişi
+            </a>
+
+            <a style="margin-top:5px; width: 200px;" asp-action="Login" asp-controller="Account"  class="list-group-item">
+                <span class="float-left"><span class="fa fa-user-graduate"></span></span>Akademisyen Girişi
+            </a>
+
+            <a style="margin-top:5px; width: 200px;" asp-action="Login" asp-controller="Account"  class="list-group-item">
+                <span class="float-left"><span class="fa fa-user-secret"></span></span>Yönetici Girişi
+            </a>
+        </div>
+    </div>
+</div>

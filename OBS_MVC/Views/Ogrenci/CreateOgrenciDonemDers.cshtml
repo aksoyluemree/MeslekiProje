@@ -1,0 +1,61 @@
+﻿@model OBS_MVC.Models.ObsOgrenciDonemDers
+
+@{
+    ViewData["Title"] = "Oluştur";
+}
+
+<h1>Ekle</h1>
+
+<h4>ObsOgrenciDonemDers</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="CreateOgrenciDonemDers">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="DonemDersId" class="control-label"></label>
+                <select asp-for="DonemDersId" class ="form-control" asp-items="ViewBag.DonemDersId"></select>
+            </div>
+            @*<div class="form-group">
+                <label asp-for="OgrenciId" class="control-label"></label>
+                <select asp-for="OgrenciId" class ="form-control" asp-items="ViewBag.OgrenciId"></select>
+            </div>*@
+            @*<div class="form-group">
+                <label asp-for="Vize1" class="control-label"></label>
+                <input asp-for="Vize1" class="form-control" />
+                <span asp-validation-for="Vize1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Vize2" class="control-label"></label>
+                <input asp-for="Vize2" class="form-control" />
+                <span asp-validation-for="Vize2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FinalNot" class="control-label"></label>
+                <input asp-for="FinalNot" class="form-control" />
+                <span asp-validation-for="FinalNot" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ortalama" class="control-label"></label>
+                <input asp-for="Ortalama" class="form-control" />
+                <span asp-validation-for="Ortalama" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BasariDurumTip" class="control-label"></label>
+                <input asp-for="BasariDurumTip" class="form-control" />
+                <span asp-validation-for="BasariDurumTip" class="text-danger"></span>
+            </div>*@
+            <div class="form-group">
+                <input type="submit" value="Oluştur" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="OgrenciDonemDers">Geri Dön</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

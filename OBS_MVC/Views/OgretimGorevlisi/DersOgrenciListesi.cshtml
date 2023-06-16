@@ -1,0 +1,72 @@
+﻿@model IEnumerable<OBS_MVC.Models.ObsOgrenciDonemDers>
+
+@{
+    ViewData["Title"] = "DersOgrenciListesi";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>DersOgrenciListesi</h1>
+
+@*<p>
+    <a asp-action="Create">Create New</a>
+</p>*@
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.DonemDers)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ogrenci)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Vize1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Vize2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FinalNot)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ortalama)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BasariDurumTip)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DonemDers.Ders.Ad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ogrenci.Ad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Vize1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Vize2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FinalNot)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ortalama)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BasariDurumTip)
+            </td>
+            <td>
+                <a asp-action="OgrenciDersEdit" asp-route-id="@item.KayıtId">Düzenle</a> |
+                @*<a asp-action="Details" asp-route-id="@item.KayıtId">Detay</a> |
+            <a asp-action="Delete" asp-route-id="@item.KayıtId">Sil</a>*@
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

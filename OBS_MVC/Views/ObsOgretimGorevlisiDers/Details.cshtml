@@ -1,0 +1,30 @@
+﻿@model OBS_MVC.Models.ObsOgretimGorevlisiDers
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>ObsOgretimGorevlisiDers</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DonemDers)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DonemDers.DonemDersId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OgretimGorevlisi)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OgretimGorevlisi.Ad)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.OgretmenDersId">Düzenle</a> |
+    <a asp-action="Index">Listeye dön</a>
+</div>

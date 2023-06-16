@@ -1,0 +1,46 @@
+﻿@model OBS_MVC.Models.ObsOgrenciSinav
+
+@{
+    ViewData["Title"] = "Oluştur";
+}
+
+<h1>Ekle</h1>
+
+<h4>ObsOgrenciSinav</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="OgrenciSinavId" class="control-label"></label>
+                <input asp-for="OgrenciSinavId" class="form-control" />
+                <span asp-validation-for="OgrenciSinavId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OgrenciId" class="control-label"></label>
+                <select asp-for="OgrenciId" class ="form-control" asp-items="ViewBag.OgrenciId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="SinavId" class="control-label"></label>
+                <select asp-for="SinavId" class ="form-control" asp-items="ViewBag.SinavId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Notu" class="control-label"></label>
+                <input asp-for="Notu" class="form-control" />
+                <span asp-validation-for="Notu" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Listeye dön</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

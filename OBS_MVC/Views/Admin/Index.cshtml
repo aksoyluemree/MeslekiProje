@@ -1,0 +1,108 @@
+﻿@model OBS_MVC.Models.ObsKullanici
+<div class="container bootstrap snippets bootdey">
+    <div class="panel-body inf-content">
+        <div class="row">
+@*            <div class="col-md-3">
+                <div class="list-group">
+                    <div class="col-sm-4">
+                        <a style="margin-top:5px; width: 200px;" class="list-group-item" href="@Url.Action("Index", "ObsDers")">
+                            <span class="float-left"><span class="fa fa-pencil"></span></span>Ders Yönetimi
+                        </a>
+                        <a style="margin-top:5px; width: 200px;" class="list-group-item" href="@Url.Action("Index", "ObsBolum")">
+                            <span class="float-left"><span class="fa fa-pencil"></span></span>Bölüm Yönetimi
+                        </a>
+                        <a style="margin-top:5px; width: 200px;" class="list-group-item" href="@Url.Action("Index", "ObsOgrenci")">
+                            <span class="float-left"><span class="fa fa-pencil"></span></span>Öğrenci Yönetimi
+                        </a>
+                        <a style="margin-top:5px; width: 200px;" class="list-group-item" href="@Url.Action("Index", "ObsOgretimGorevlisi")">
+                            <span class="float-left"><span class="fa fa-pencil"></span></span>Öğretim Görevlisi Yönetimi
+                        </a>
+                        <a style="margin-top:5px; width: 200px;" class="list-group-item" href="@Url.Action("Index", "ObsDonem")">
+                            <span class="float-left"><span class="fa fa-pencil"></span></span>Dönem Yönetimi
+                        </a>
+                        <a style="margin-top:5px; width: 200px;" class="list-group-item" href="@Url.Action("Index", "ObsFakulte")">
+                            <span class="float-left"><span class="fa fa-pencil"></span></span>Fakülte Yönetimi
+                        </a>
+                        <a style="margin-top:5px; width: 200px;" class="list-group-item" href="@Url.Action("Index", "ObsDuyuru")">
+                            <span class="float-left"><span class="fa fa-pencil"></span></span>Duyuru Yönetimi
+                        </a>
+                        <a style="margin-top:5px; width: 200px;" class="list-group-item" href="@Url.Action("Index", "ObsSinav")">
+                            <span class="float-left"><span class="fa fa-pencil"></span></span>Sınav Yönetimi
+                        </a>
+                    </div>
+                </div>
+            </div>
+            *@
+            <div class="col-md-3">
+                <img alt="" style="width:500px;" title="" class="img-circle img-thumbnail isTooltip"
+                     src="https://pickaface.net/gallery/avatar/unr_admin_171016_2225_zewhi.png"
+                     data-original-title="Usuario">
+            </div>
+            <div class="col-md-9">
+                <strong>Yönetici Bilgileri</strong><br>
+                <div class="table-responsive">
+                    <table class="table table-user-information">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <strong>
+                                        <span class="fa fa-asterisk text-primary"></span>
+                                        TC Kimlik Numarası
+                                    </strong>
+                                </td>
+                                <td class="text-primary">
+                                    @Model.KimlikNo
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>
+                                        <span class="fa fa-user  text-primary"></span>
+                                        Kullanıcı Id
+                                    </strong>
+                                </td>
+                                <td class="text-primary">
+                                    @Model.KullaniciId
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>
+                                        <span class="fa fa-cloud text-primary"></span>
+                                        KullanıcıAdı
+                                    </strong>
+                                </td>
+                                <td class="text-primary">
+                                    @Model.KullaniciAdi
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>
+                                        <span class="fa fa-eye text-primary"></span>
+                                        Role
+                                    </strong>
+                                </td>
+                                <td class="text-primary">
+                                    @Model.Turu
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>
+                                        <span class="fa fa-envelope text-primary"></span>
+                                        E-Posta
+                                    </strong>
+                                </td>
+                                <td class="text-primary">
+                                    admin@admin.com
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

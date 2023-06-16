@@ -1,0 +1,39 @@
+﻿@model OBS_MVC.Models.ObsOgretimGorevlisiDers
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>ObsOgretimGorevlisiDers</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="OgretmenDersId" />
+            <div class="form-group">
+                <label asp-for="OgretimGorevlisiId" class="control-label"></label>
+                <select asp-for="OgretimGorevlisiId" class="form-control" asp-items="ViewBag.OgretimGorevlisiId"></select>
+                <span asp-validation-for="OgretimGorevlisiId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DonemDersId" class="control-label"></label>
+                <select asp-for="DonemDersId" class="form-control" asp-items="ViewBag.DonemDersId"></select>
+                <span asp-validation-for="DonemDersId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Listeye dön</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
